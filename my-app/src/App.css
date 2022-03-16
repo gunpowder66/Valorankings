@@ -1,0 +1,108 @@
+
+ body {
+  background-color: rgba(21, 31, 43, 0.9);
+  color: aliceblue;
+}
+.fade-enter{
+  opacity: 0;
+}
+.fade-exit{
+  opacity: 1;
+}
+.fade-enter-active{
+  opacity: 1;
+}
+.fade-exit-active{
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-exit-active{
+  transition: opacity 150ms;
+}
+
+.all {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.scrolling-buttons{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+
+
+/* ------------CARD-------------  */
+.card{
+  display: inline-block;
+  flex-wrap: wrap;
+  overflow: hidden;
+  height: 500px;
+  width: 650px;
+  border: 1px solid rgba(23, 33, 46, 0.9);
+  border-radius: 10px;
+  background-color: rgba(30, 44, 61, 0.9);
+}
+
+.rendered-gun{
+  /* margin-left: -2%; */
+  height: 35%;
+  width: 100%;
+}
+
+.gun-name {
+  margin-left: 40%;
+  margin-bottom: 17%;
+
+}
+
+/* ------------CHROMAS-------------  */
+.all-chromas {
+  position: relative;
+  margin-left: 35%;
+}
+
+.chroma-map{
+  display: flex;
+}
+
+.chroma-crop {
+  box-shadow: 0 3px #413c3c;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  /* border: 1px solid black ; */
+  margin: 0.5%;
+}
+
+.chroma-crop:hover {
+  filter: brightness(70%);
+}
+
+.chroma-crop:active {
+  box-shadow: 0 1px rgb(58, 57, 57);
+  transform: translateY(2px);
+}
+
+.chromas{
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  /* width: auto; */
+}
+ /* ---------- GUN LEVEL BUTTONS -------------- */
+.gun-levels {
+  margin-left: 35%
+}
+
+/* ---------- ratings -------------- */
+
+.rating-box {
+  width: 100%;
+  justify-content: center;
+}
