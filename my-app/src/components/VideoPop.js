@@ -28,7 +28,7 @@ export default function VideoPop ({ gunLevel }) {
             </Fab>
             <Popover
             sx={{
-              border: '1px solid black'
+              border: '1px solid black',
             }}
             open={Boolean(anchor)}
             anchorEl={anchor}
@@ -42,7 +42,7 @@ export default function VideoPop ({ gunLevel }) {
               horizontal:"left",
             }}
             >
-              <video style={{width: '600px', marginBottom: '-4px'}} muted autoplay="autoplay" controls>
+              <video style={{width: '600px', marginBottom: '-5.95px'}} muted autoplay="autoplay" controls>
                 <source src={level.streamedVideo}/>
               </video>
             </Popover>

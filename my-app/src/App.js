@@ -28,6 +28,10 @@ function App() {
   useEffect(() => {
     getGuns()
       .then((data) => {
+        let names = []
+        data.data.data.map((gun) => {
+          names.push(gun.displayName)
+        })
         setGuns(data.data.data[gunCount])
       })
   },[gunCount])
@@ -46,52 +50,101 @@ function App() {
       })
   }
 
-  if (gun.length === 0) {
-    return (
-      <div>Loading...</div>
-    )
-  } else {
-    return (
+  return (
+    <>
+    {gun.length === 0 ?
+    <div>Loading...</div> :
       <div className="all">
-        <div className="scrolling-buttons">
-          <button
-            onClick={() => {
-              prevGun()
-              setAppear(state => !state)
-            }}
-            disabled={gunCount === 0}>
-            Prev
-          </button>
+           <div className="scrolling-buttons">
+               <button
+                  onClick={() => {
+                    prevGun()
+                    setAppear(state => !state)
+                  }}
+                  disabled={gunCount === 0}>
+                  Prev
+                </button>
 
-          <button
-            onClick={() => {
-              nextGun()
-              setAppear(state => !state)
-            }}
-            disabled={gunCount === gunLength}>
-            Next
-          </button>
-        </div>
+                <button
+                  onClick={() => {
+                    nextGun()
+                    setAppear(state => !state)
+                  }}
+                  disabled={gunCount === gunLength}>
+                  Next
+                </button>
+              </div>
 
-        <SwitchTransition mode="out-in">
-          <CSSTransition
-            key={appear}
-            addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}
-            classNames='fade'
-          >
-            {appear ? <Card gun={gun}/> : <Card gun={gun}/> }
-          </CSSTransition>
-        </SwitchTransition>
-      <div className="rating-box">
-        <div style={{marginLeft: '47%', marginTop: '2%'}}>
-            Rate This Skin
-        </div>
-        <RatingButtons />
-      </div>
+              <SwitchTransition mode="out-in">
+                <CSSTransition
+                  key={appear}
+                  addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}
+                  classNames='fade'
+                >
+                  {appear ? <Card gun={gun}/> : <Card gun={gun}/> }
+                </CSSTransition>
+              </SwitchTransition>
 
-      </div>
-    )
-  }
+            <div className="rating-box">
+              <div style={{marginLeft: '47%', marginTop: '2%'}}>
+                  Rate This Skin
+              </div>
+              <RatingButtons gun={gun} nextGun={nextGun} setAppear={setAppear}/>
+            </div>
+
+            </div>
+        }
+    </>
+
+  )
+
+//   if (gun.length === 0) {
+//     return (
+//       <div>Loading...</div>
+//     )
+//   } else {
+//     return (
+//       <div className="all">
+//         <div className="scrolling-buttons">
+//           <button
+//             onClick={() => {
+//               prevGun()
+//               setAppear(state => !state)
+//             }}
+//             disabled={gunCount === 0}>
+//             Prev
+//           </button>
+
+//           <button
+//             onClick={() => {
+//               nextGun()
+//               setAppear(state => !state)
+//             }}
+//             disabled={gunCount === gunLength}>
+//             Next
+//           </button>
+//         </div>
+
+//         <SwitchTransition mode="out-in">
+//           <CSSTransition
+//             key={appear}
+//             addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}
+//             classNames='fade'
+//           >
+//             {appear ? <Card gun={gun}/> : <Card gun={gun}/> }
+//           </CSSTransition>
+//         </SwitchTransition>
+
+//       <div className="rating-box">
+//         <div style={{marginLeft: '47%', marginTop: '2%'}}>
+//             Rate This Skin
+//         </div>
+//         <RatingButtons gun={gun} nextGun={nextGun} setAppear={setAppear}/>
+//       </div>
+
+//       </div>
+//     )
+//   }
 
 }
 

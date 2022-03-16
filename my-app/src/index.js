@@ -2,10 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Rankpage from './Rankpage';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navigation from './components/Navigation';
+
 
 ReactDOM.render(
-    <App />
+  <Router>
+    <Navigation />
+      <Routes>
+        <Route path='/' element={<App />}/>
+        <Route path='/rankings' element={<Rankpage />} />
+      </Routes>
+  </Router>
     ,
   document.getElementById('root')
 );
