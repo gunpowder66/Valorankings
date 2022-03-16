@@ -13,7 +13,6 @@ export default function VideoPop ({ gunLevel }) {
     <>
     { gunLevel.length > 1 ?
       <div className="gun-levels">
-          GUN LEVELS
             <div className="chroma-map">
           {gunLevel.map((level, index) => (
             <div key={`level${index}`}>

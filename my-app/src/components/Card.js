@@ -26,7 +26,9 @@ export default function Cards ({ gun }) {
 
       {gun.chromas.length > 1 ?
       <div className="all-chromas">
-          STYLES
+        <div style={{textAlign: 'center'}
+      }>
+        </div>
           <div className="chroma-map">
             {gun.chromas.map((chroma, index) => (
               <div className="chroma-crop">

@@ -1,7 +1,7 @@
 
  body {
   background-color: rgba(21, 31, 43, 0.9);
-  color: aliceblue;
+  color: rgb(199, 209, 216);
 }
 .fade-enter{
   opacity: 0;
@@ -46,29 +46,32 @@
   border: 1px solid rgba(23, 33, 46, 0.9);
   border-radius: 10px;
   background-color: rgba(30, 44, 61, 0.9);
-  box-shadow: 4px 4px 5px 3px #1f1c1c;
+  box-shadow: 4px 4px 5px 3px #201e1e;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .rendered-gun{
-  /* margin-left: -2%; */
   height: 35%;
   width: 100%;
+  margin-bottom: 8%;
 }
 
 .gun-name {
-  margin-left: 40%;
-  margin-bottom: 17%;
-
+  text-align: center;
+  margin-bottom: 10%;
+  font-weight: bolder;
+  font-size: 2.5em;
 }
 
 /* ------------CHROMAS-------------  */
 .all-chromas {
   position: relative;
-  margin-left: 35%;
 }
 
 .chroma-map{
   display: flex;
+  margin-bottom: 2%;
+  justify-content: center;
 }
 
 .chroma-crop {
@@ -99,7 +102,7 @@
 }
  /* ---------- GUN LEVEL BUTTONS -------------- */
 .gun-levels {
-  margin-left: 35%
+
 }
 
 /* ---------- ratings -------------- */
