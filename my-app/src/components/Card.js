@@ -21,7 +21,9 @@ export default function Cards ({ gun }) {
     <div className="card">
 
       <div className="gun-name">{gun.displayName}</div>
+      <div style={{textAlign: 'center'}}>
       <img className="rendered-gun" src={renderedGun} alt="gun thumbnail"/>
+      </div>
 
 
       {gun.chromas.length > 1 ?

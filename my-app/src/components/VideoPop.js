@@ -13,7 +13,7 @@ export default function VideoPop ({ gunLevel }) {
     <>
     { gunLevel.length > 1 ?
       <div className="gun-levels">
-            <div className="chroma-map">
+            <div className="pop-map">
           {gunLevel.map((level, index) => (
             <div key={`level${index}`}>
             <Fab
@@ -41,7 +41,7 @@ export default function VideoPop ({ gunLevel }) {
               horizontal:"left",
             }}
             >
-              <video style={{width: '600px', marginBottom: '-5.95px'}} muted autoplay="autoplay" controls>
+              <video style={{width: '600px', marginBottom: '-5.95px'}} muted autoPlay="autoplay" controls>
                 <source src={level.streamedVideo}/>
               </video>
             </Popover>

@@ -11,20 +11,76 @@
 }
 .fade-enter-active{
   opacity: 1;
+  right: 10%;
+  margin-left: 12%;
 }
 .fade-exit-active{
   opacity: 0;
+  margin-left: 20%;
 }
 .fade-enter-active,
 .fade-exit-active{
-  transition: opacity 150ms;
+  transition: opacity 250ms, margin-left 400ms, margin-right 400ms;
+
 }
 
 .all {
   display:flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin-top: 4%;
+  overflow: hidden;
+}
+
+.left-filter-buttons {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-left: 4%;
+  align-self: flex-start;
+  width: 27%;
+}
+
+.right-filter-buttons {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  margin-right: 4%;
+  width: 27%;
+  /* width: 50%; */
+  /* margin-left: 4%; */
+  /* align-self: flex-start; */
+}
+
+.filter-pics {
+  width: 20%;
+  height: auto;
+  margin-bottom: 7%;
+  left: 10%;
+}
+
+.filter-pics-right {
+  width: 40%;
+  height: auto;
+  margin-bottom: 6%;
+  right: 10%;
+}
+
+/* .middle-stuff {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 4%;
+  height: 200%;
+} */
+
+.top-middle {
+ align-self: center;
+ z-index: 1;
+}
+
+.right-filter-buttons {
+  align-self: flex-start;
 }
 
 .scrolling-buttons{
@@ -34,12 +90,46 @@
   margin-bottom: 20px;
 }
 
+.ranking-page {
+  display: flex;
+}
+
+.middle-rankings {
+  flex-grow: 2;
+}
+
+.right-filter-buttons-rankings {
+  width: 10%;
+  flex-direction: column;
+}
+
+.left-filter-buttons-rankings {
+  width: 10%;
+  flex-direction: column;
+}
+
+.filter-pics-rankings {
+  width: 70%;
+  margin-bottom: 15%;
+  margin-left: 5%;
+}
+
+.filter-pics-rankings-right {
+  width: 95%;
+  margin-top: 5%;
+  margin-bottom: 15%;
+
+}
+
 
 
 /* ------------CARD-------------  */
 .card{
   display: inline-block;
+  flex-direction: row;
   flex-wrap: wrap;
+  /* justify-content: space-between; */
+  /* align-items: flex-end; */
   overflow: hidden;
   height: 500px;
   width: 650px;
@@ -48,15 +138,28 @@
   background-color: rgba(30, 44, 61, 0.9);
   box-shadow: 4px 4px 5px 3px #201e1e;
   font-family: 'Montserrat', sans-serif;
+  margin-bottom: 10%;
 }
 
 .rendered-gun{
-  height: 35%;
-  width: 100%;
-  margin-bottom: 8%;
+  /* position: fix; */
+  /* margin: auto; */
+  /* max-width: 200px; */
+  /* max-height: auto; */
+  flex-basis: auto;
+  min-width: auto;
+  min-height: 30%;
+  max-width: auto;
+  max-height: 116px;
+  top: 25%;
+  left: 10%;
+
+  /* bottom: 50%; */
+  /* margin-bottom: 8%; */
 }
 
 .gun-name {
+  width: 100%;
   text-align: center;
   margin-bottom: 10%;
   font-weight: bolder;
@@ -65,7 +168,10 @@
 
 /* ------------CHROMAS-------------  */
 .all-chromas {
-  position: relative;
+  width: 100%;
+  /* align-self: flex-end; */
+  bottom: 25%;
+  position: absolute;
 }
 
 .chroma-map{
@@ -102,12 +208,17 @@
 }
  /* ---------- GUN LEVEL BUTTONS -------------- */
 .gun-levels {
+  margin-top: 23%;
+}
 
+.pop-map {
+  display:flex;
+  justify-content: center;
 }
 
 /* ---------- ratings -------------- */
 
-.rating-box {
-  width: 100%;
-  justify-content: center;
-}
+/* .rating-box {
+  wid
+  align-self: flex-end;
+} */
