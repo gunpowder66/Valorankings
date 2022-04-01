@@ -44,6 +44,7 @@ export default function Rankpage () {
             }
           }
         }
+        // finArr.sort((a, b) => (b.total_rating / b.count) - (a.total_rating / a.count))
         setGuns(finArr);
         setRendered(finArr);
       }))

@@ -68,10 +68,7 @@
 }
 
 /* .middle-stuff {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 200%;
+  max-width: 60%;
 } */
 
 .top-middle {
