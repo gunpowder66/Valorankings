@@ -11,6 +11,8 @@
 Valorankings is a crowdsourcing web app to vote on and show rankings for Valorant cosmetic items.
 #### Built With
 ![image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![image](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![image](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![image](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![image](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![image](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
@@ -22,6 +24,16 @@ npm install
 ```
 
 #### 2. Running the Project
+
+Run Postgresql server:
+```bash
+sudo service postgresql start
+#create tables
+psql -d Valoranking -f schema/schema.sql
+#populate tables
+psql -d Valoranking -f schema/populateTables.sql
+```
+
 Runs development server:
 ```bash
 npm start
@@ -33,6 +45,23 @@ This script will also run webpack and auto refresh the page whenever you make ch
 
 
 ## Project Details
+
+<details>
+  <summary>
+  <h2>Voting</h2>
+  </summary>
+
+- #### Vote on cosmetics with a scoring system from 1 to 5
+
+- #### See different chromas and levels of the cosmetic (if it has any)
+  ![gif](public/gifs/Valorankings_voting.gif)
+
+</details>
+
+<details>
+  <summary>Overview</summary>
+	Filler
+</details>
 
 <details>
   <summary>Overview</summary>
