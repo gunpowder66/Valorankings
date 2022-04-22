@@ -54,7 +54,6 @@ This script will also run webpack and auto refresh the page whenever you make ch
   </summary>
 
 - #### Vote on cosmetics with a scoring system from 1 to 5
-
 - #### See different chromas and levels of the cosmetic (if it has any)
   ![gif](public/gifs/Valorankings_voting.gif)
 
@@ -66,7 +65,6 @@ This script will also run webpack and auto refresh the page whenever you make ch
   </summary>
 
 - #### Filter cosmetic type based on side icons clicked
-
 - #### Reset to default sorting style of jump to a random weapon
   ![gif](public/gifs/Valorankings_Filtering.gif)
 
@@ -78,7 +76,6 @@ This script will also run webpack and auto refresh the page whenever you make ch
   </summary>
 
 - #### Shows table of all cosmetic items ranked by total rating
-
 - #### Filter table via side icons to only see rankings for a specific cosmetic type
   ![gif](public/gifs/Valorankings_rankings.gif)
 
