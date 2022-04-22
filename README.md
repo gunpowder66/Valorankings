@@ -37,8 +37,10 @@ psql -d Valoranking -f schema/populateTables.sql
 Runs development server:
 ```bash
 npm start
+npm run server
 # or
 yarn start
+yarn run server
 ```
 The application will be running on [http://localhost:3000](http://localhost:3000).
 This script will also run webpack and auto refresh the page whenever you make changes.
@@ -48,7 +50,7 @@ This script will also run webpack and auto refresh the page whenever you make ch
 
 <details>
   <summary>
-  <h2>Voting</h2>
+  <h3>Voting</h3>
   </summary>
 
 - #### Vote on cosmetics with a scoring system from 1 to 5
@@ -59,13 +61,27 @@ This script will also run webpack and auto refresh the page whenever you make ch
 </details>
 
 <details>
-  <summary>Overview</summary>
-	Filler
+  <summary>
+  <h3>Filtering</h3>
+  </summary>
+
+- #### Filter cosmetic type based on side icons clicked
+
+- #### Reset to default sorting style of jump to a random weapon
+  ![gif](public/gifs/Valorankings_Filtering.gif)
+
 </details>
 
 <details>
-  <summary>Overview</summary>
-	Filler
+  <summary>
+  <h3>Rankings Page</h3>
+  </summary>
+
+- #### Shows table of all cosmetic items ranked by total rating
+
+- #### Filter table via side icons to only see rankings for a specific cosmetic type
+  ![gif](public/gifs/Valorankings_rankings.gif)
+
 </details>
 
 
